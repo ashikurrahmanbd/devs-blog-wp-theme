@@ -1,5 +1,5 @@
 (function($){
-    
+
     $(document).ready(function() {
     
         /* ======= DEMO THEME CONFIG ====== */
@@ -32,7 +32,7 @@
         $('#color-options a').on('click', function(e) { 
 
             e.preventDefault();
-            var $styleSheet =   $(this).attr('data-style');
+            var $styleSheet = $(this).attr('data-style');
             
             // -css is actually added by wp so i added here
             $('#theme-main-style-css').attr('href', $styleSheet);
