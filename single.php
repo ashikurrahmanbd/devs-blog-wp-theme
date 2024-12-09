@@ -78,21 +78,23 @@
 				
 		    </div><!--//container-->
 	    </article>
+
+        <?php
+
+            $promo_heading = get_post_meta( get_the_ID(), 'post_promotion_heading_id', true);
+
+            $promo_description = get_post_meta( get_the_ID(), 'post_promotion_description_id', true );
+
+            $promotion_image = get_post_meta(get_the_ID(), 'post_protion_image', true);
+
+            $promotion_action_link = get_post_meta(get_the_ID(), 'promotion_image_url', true);
+
+
+        ?>
 	    
+        <?php if($promo_heading || $promo_description): ?>
 	    <section class="promo-section theme-bg-light py-5 text-center">
 		    <div class="container">
-                
-                <?php
-                    $promo_heading = get_post_meta( get_the_ID(), 'post_promotion_heading_id', true);
-
-                    $promo_description = get_post_meta( get_the_ID(), 'post_promotion_description_id', true );
-
-                    $promotion_image = get_post_meta(get_the_ID(), 'post_protion_image', true);
-
-                    $promotion_action_link = get_post_meta(get_the_ID(), 'promotion_image_url', true);
-
-
-                ?>
                         
                 <?php if($promo_heading): ?>
 			    <h2 class="title"><?php echo esc_attr__( $promo_heading. 'devs-blog' ); ?></h2>
@@ -110,5 +112,6 @@
                 <?php endif; ?>
 		    </div><!--//container-->
 	    </section><!--//promo-section-->
+        <?php endif; ?>
 	    
 	    <?php get_footer(); ?>
