@@ -11,7 +11,6 @@ class ReduxThemeOptions {
 
         $this->integrate_redux_option();
 
-
     }
 
     public function integrate_redux_option(){
@@ -38,5 +37,7 @@ class ReduxThemeOptions {
         }
 
     }
+
+    
 
 }

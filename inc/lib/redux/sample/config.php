@@ -325,6 +325,19 @@ Redux::set_section($opt_name, array(
 			'id'		=>	'db_site_author_bio',
 			'type'		=> 'textarea'
 		),
+		array(
+			'title'		=> __('Author CTA Text', 'devs-blog'),
+			'id'		=>	'db_site_author_cta_text',
+			'type'		=> 'text'
+		),
+
+		array(
+			'title'		=> __('Author CTA Link', 'devs-blog'),
+			'id'		=>	'db_site_author_cta_link',
+			'type'		=> 'text'
+		),
+
+
 
 
 
@@ -373,6 +386,8 @@ Redux::set_section($opt_name, array(
 	)
 
 ));
+
+
 
 Redux::set_section($opt_name, array(
 

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php global $devs_blog; ?>
 <html <?php language_attributes(); ?>> 
 <head>
 
@@ -25,7 +26,7 @@
 	<?php wp_body_open(); ?>
     
     <header class="header text-center">	    
-	    <h1 class="blog-name pt-lg-4 mb-0"><a href="<?php echo home_url(); ?>">Anthony's Blog</a></h1>
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="<?php echo home_url(); ?>"><?php echo $devs_blog['db_site_title']; ?></a></h1>
         
 	    <nav class="navbar navbar-expand-lg navbar-dark" >
            
