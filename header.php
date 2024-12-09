@@ -35,16 +35,61 @@
 			</button>
 
 			<div id="navigation" class="collapse navbar-collapse flex-column" >
+
+
 				<div class="profile-section pt-3 pt-lg-0">
-				    <img class="profile-image mb-3 rounded-circle mx-auto" src="<?php echo get_template_directory_uri();  ?>/assets/images/profile.png" alt="image" >			
+
+					<?php
+
+						$author_profile = isset($devs_blog['db_site_author_image']) ? $devs_blog['db_site_author_image']['url'] : '';
+
+						$author_bio = isset($devs_blog['db_site_author_bio']) ? $devs_blog['db_site_author_bio'] : '';
+
+						$author_twitter = isset($devs_blog['db_site_author_twitter']) ? $devs_blog['db_site_author_twitter'] : '';
+
+						$author_linkedin = isset($devs_blog['db_site_author_linkedin']) ? $devs_blog['db_site_author_linkedin'] : '';
+
+						$author_github = isset($devs_blog['db_site_author_github']) ? $devs_blog['db_site_author_github'] : '';
+
+						$author_stackoverflow = isset($devs_blog['db_site_author_stackoverflow']) ? $devs_blog['db_site_author_stackoverflow'] : '';
+
+						$author_codepen = isset($devs_blog['db_site_author_codepen']) ? $devs_blog['db_site_author_codepen'] : '';
+
+
+
+					?>
+
+
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="<?php echo $author_profile; ?>" alt="image" >			
 					
-					<div class="bio mb-3">Hi, my name is Anthony Doe. Briefly introduce yourself here. You can also provide a link to the about page.<br><a href="about.html">Find out more about me</a></div><!--//bio-->
+					<div class="bio mb-3">
+						<?php echo $author_bio; ?>
+						
+					</div>
+
 					<ul class="social-list list-inline py-3 mx-auto">
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+
+
+						<?php if($author_twitter): ?>
+			            <li class="list-inline-item"><a href="<?php echo $author_twitter; ?>"><i class="fab fa-twitter fa-fw"></i></a></li>
+						<?php endif; ?>
+
+						<?php if($author_linkedin): ?>
+			            <li class="list-inline-item"><a href="<?php echo $author_linkedin; ?>"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+						<?php endif; ?>
+
+						<?php if($author_github): ?>
+			            <li class="list-inline-item"><a href="<?php echo $author_github; ?>"><i class="fab fa-github-alt fa-fw"></i></a></li>
+						<?php endif; ?>
+
+						<?php if($author_stackoverflow): ?>
+			            <li class="list-inline-item"><a href="<?php echo $author_stackoverflow; ?>"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+						<?php endif; ?>
+
+						<?php if($author_codepen): ?>
+			            <li class="list-inline-item"><a href="<?php echo $author_codepen; ?>"><i class="fab fa-codepen fa-fw"></i></a></li>
+						<?php endif; ?>
+
 			        </ul><!--//social-list-->
 			        <hr> 
 				</div><!--//profile-section-->
@@ -73,9 +118,21 @@
 					));
 				?>
 				
+				<?php 
+
+					$author_cta = isset($devs_blog['db_site_author_cta_text']) ? $devs_blog['db_site_author_cta_text'] : '';
+
+					$author_cta_link = isset($devs_blog['db_site_author_cta_link']) ? $devs_blog['db_site_author_cta_link'] : '';
+
+				?>
+
+				<?php if($author_cta): ?>
 				<div class="my-2 my-md-3">
-				    <a class="btn btn-primary" href="#" target="_blank">Get in Touch</a>
+				    <a class="btn btn-primary" href="<?php echo $author_cta_link; ?>" target="_blank"><?php echo $author_cta; ?></a>
 				</div>
+				<?php endif; ?>
+
+
 			</div>
 		</nav>
     </header>
