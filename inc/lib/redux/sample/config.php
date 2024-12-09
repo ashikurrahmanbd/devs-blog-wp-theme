@@ -226,24 +226,178 @@ $args = array(
 Redux::set_args( $opt_name, $args );
 
 /*
- * ---> END ARGUMENTS
- */
+* ---> END ARGUMENTS
+*/
 
 
 
 
 
 /*
- * ---> START SECTIONS
+* ---> START SECTIONS
 */
 
 Redux::set_section($opt_name, array(
 
-	'title'	=> __('Devs Blog General', 'devs-blog')
+	'title'	=> __('General Options', 'devs-blog')
+
+));
+
+Redux::set_section($opt_name, array(
+
+	'title'			=> __('Global Settings', 'devs-blog'),
+	'desc'			=> __('All Gobal settings for the site', 'devs-blog'),
+	'subsection'	=>	true,
+	'fields'		=> array(
+
+		array(
+			'title'		=> __('Site Title', 'devs-blog'),
+			'id'		=> 'db_site_title',
+			'type'		=> 'text'
+		),
+
+		array(
+			'title'		=> __('Primary Color', 'devs-blog'),
+			'id'		=> 'db_site_primary_color',
+			'type'		=> 'image_select',
+			'subtitle' => __('Choose your primary Color', 'devs-blog'),
+			'options'  => [
+                'color1' => [
+                    'title' => __('', 'devs-blog'),
+                    'img'   => get_template_directory_uri() . '/assets/images/sitecolor/color-one.png', // Path to the first layout preview image.
+                ],
+                'color2' => [
+                    'title' => __('', 'devs-blog'),
+                    'img'   => get_template_directory_uri() . '/assets/images/sitecolor/color-two.png', // Path to the second layout preview image.
+                ],
+                'color3' => [
+                    'title' => __('', 'devs-blog'),
+                    'img'   => get_template_directory_uri() . '/assets/images/sitecolor/color-three.png', // Path to the third layout preview image.
+                ],
+				'color4' => [
+                    'title' => __('', 'devs-blog'),
+                    'img'   => get_template_directory_uri() . '/assets/images/sitecolor/color-four.png', // Path to the third layout preview image.
+                ],
+
+				'color5' => [
+                    'title' => __('', 'devs-blog'),
+                    'img'   => get_template_directory_uri() . '/assets/images/sitecolor/color-five.png', // Path to the third layout preview image.
+                ],
+
+				'color6' => [
+                    'title' => __('', 'devs-blog'),
+                    'img'   => get_template_directory_uri() . '/assets/images/sitecolor/color-six.png', // Path to the third layout preview image.
+                ],
+
+				'color7' => [
+                    'title' => __('', 'devs-blog'),
+                    'img'   => get_template_directory_uri() . '/assets/images/sitecolor/color-seven.png', // Path to the third layout preview image.
+                ],
+				'color8' => [
+                    'title' => __('', 'devs-blog'),
+                    'img'   => get_template_directory_uri() . '/assets/images/sitecolor/color-eight.png', // Path to the third layout preview image.
+                ],
+            ],
+            'default'  => 'color1',
+		),
+
+		
+
+
+	)
+
+));
+
+Redux::set_section($opt_name, array(
+
+	'title'			=> __('Header', 'devs-blog'),
+	'subsection'	=>	true,
+	'fields'		=> array(
+
+		array(
+			'title'		=> __('Author Image', 'devs-blog'),
+			'id'		=> 'db_site_author_image',
+			'type'		=> 'media'
+		),
+
+		array(
+			'title'		=> __('Author Bio', 'devs-blog'),
+			'id'		=>	'db_site_author_bio',
+			'type'		=> 'textarea'
+		),
+
+
+
+	)
 
 ));
 
 
+//author socials
+Redux::set_section($opt_name, array(
+
+	'title'			=> __('Author Socials', 'devs-blog'),
+	'subsection'	=>	true,
+	'fields'		=> array(
+
+		array(
+			'title'		=> __('Twitter', 'devs-blog'),
+			'id'		=> 'db_site_author_twitter',
+			'type'		=> 'text'
+		),
+
+		array(
+			'title'		=> __('Linkedin', 'devs-blog'),
+			'id'		=> 'db_site_author_linkedin',
+			'type'		=> 'text'
+		),
+		array(
+			'title'		=> __('Github', 'devs-blog'),
+			'id'		=> 'db_site_author_github',
+			'type'		=> 'text'
+		),
+
+		array(
+			'title'		=> __('Stack Overfolow', 'devs-blog'),
+			'id'		=> 'db_site_author_stackoverflow',
+			'type'		=> 'text'
+		),
+
+		array(
+			'title'		=> __('Codepen', 'devs-blog'),
+			'id'		=> 'db_site_author_codepen',
+			'type'		=> 'text'
+		),
+		
+
+	)
+
+));
+
+Redux::set_section($opt_name, array(
+
+	'title'			=> __('Footer', 'devs-blog'),
+	'subsection'	=>	true,
+	'fields'		=> array(
+		array(
+			'title'		=> __('Footer Copyright Text', 'devs-blog'),
+			'id'		=> 'db_site_footer_copyright_text',
+			'type'		=> 'text',
+			'desc'		=> 'Your Footer Copyright Text'
+		)
+	)
+
+));
+
+
+
+
+//Newsletter
+Redux::set_section($opt_name, array(
+
+	'title'	=> __('Newsletter', 'devs-blog')
+
+));
 
 /*
  * <--- END SECTIONS
