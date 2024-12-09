@@ -23,5 +23,13 @@ body.single .blog-nav .nav-link .arrow-next{
     right: 1px;
 }
 
+#menu-devs-blog-menu li {
+    margin: 6px 0;
+}
+#menu-devs-blog-menu li a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
 
+}
 

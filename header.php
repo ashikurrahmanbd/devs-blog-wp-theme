@@ -48,7 +48,8 @@
 			        <hr> 
 				</div><!--//profile-section-->
 				
-				<ul class="navbar-nav flex-column text-left">
+				<!-- <ul class="navbar-nav flex-column text-left">
+
 					<li class="nav-item active">
 					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
 					</li>
@@ -58,7 +59,18 @@
 					<li class="nav-item">
 					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
 					</li>
-				</ul>
+
+				</ul> -->
+
+				<?php
+					wp_nav_menu(array(
+						'theme_location' => 'primary-menu', // Matches the registered menu location
+						'menu_class'     => 'navbar-nav flex-column text-left', // Classes for the <ul> element
+						'container'      => false, // Removes the wrapping <div>
+						'link_before'    => '', // Adds an icon placeholder (can customize per item)
+						'fallback_cb'    => false, // No fallback if no menu is assigned
+					));
+				?>
 				
 				<div class="my-2 my-md-3">
 				    <a class="btn btn-primary" href="#" target="_blank">Get in Touch</a>
