@@ -12,8 +12,6 @@ class DB_Theme_Setup {
         add_action('after_setup_theme', array($this, 'db_theme_supports'));
         add_action('wp_enqueue_scripts', array($this, 'db_theme_assets'));
 
-       
-
     }
 
     public function db_theme_supports() {

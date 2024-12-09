@@ -82,11 +82,7 @@
 				<?php endwhile; wp_reset_postdata(); ?>
 				<?php endif; ?>
 
-			    
-			    
-
-
-
+	
 			    
 			    <nav class="blog-nav nav nav-justified my-5">
 				  <a class="nav-link-prev nav-item nav-link d-none rounded-left" href="#">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>

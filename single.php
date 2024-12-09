@@ -41,8 +41,35 @@
 			    </div>
 				    
 			    <nav class="blog-nav nav nav-justified my-5">
-				  <a class="nav-link-prev nav-item nav-link rounded-left" href="index.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-				  <a class="nav-link-next nav-item nav-link rounded-right" href="blog-list.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+
+					
+					<?php
+
+						// Get previous and next post objects
+						$prev_post = get_adjacent_post(false, '', true); // true for previous post
+						$next_post = get_adjacent_post(false, '', false); // false for next post
+
+					?>
+					
+					<?php if ($prev_post): ?>
+						<a class="nav-link-prev nav-item nav-link rounded-left" href="<?php echo esc_url(get_permalink($prev_post->ID)); ?>">
+							<?php echo 'Previous: ' . esc_html(wp_trim_words( $prev_post->post_title, 6, '...' )); ?>
+							<i class="arrow-prev fas fa-long-arrow-alt-left"></i>
+						</a>
+					<?php endif; ?>
+
+
+
+					<?php if ($next_post): ?>
+						<a class="nav-link-next nav-item nav-link rounded-right" href="<?php echo esc_url(get_permalink($next_post->ID)); ?>">
+							<?php echo 'Next: ' . esc_html(wp_trim_words( $next_post->post_title, 6, '...' )); ?>
+							<i class="arrow-next fas fa-long-arrow-alt-right"></i>
+						</a>
+					<?php endif; ?>
+
+
+
+
 				</nav>
 				
 				<div class="blog-comments-section">
@@ -54,11 +81,33 @@
 	    
 	    <section class="promo-section theme-bg-light py-5 text-center">
 		    <div class="container">
-			    <h2 class="title">Promo Section Heading</h2>
-			    <p>You can use this section to promote your side projects etc. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                
+                <?php
+                    $promo_heading = get_post_meta( get_the_ID(), 'post_promotion_heading_id', true);
+
+                    $promo_description = get_post_meta( get_the_ID(), 'post_promotion_description_id', true );
+
+                    $promotion_image = get_post_meta(get_the_ID(), 'post_protion_image', true);
+
+                    $promotion_action_link = get_post_meta(get_the_ID(), 'promotion_image_url', true);
+
+
+                ?>
+                        
+                <?php if($promo_heading): ?>
+			    <h2 class="title"><?php echo esc_attr__( $promo_heading. 'devs-blog' ); ?></h2>
+                <?php endif; ?>
+
+
+                <?php if($promo_description): ?>
+			    <p><?php echo esc_attr__( $promo_description. 'devs-blog' ); ?></p>
+                <?php endif; ?>
+
+                <?php if($promotion_image): ?>
                 <figure class="promo-figure">
-			        <a href="#" target="_blank"><img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/promo-banner.jpg" alt="image"></a>
+			        <a href="<?php echo $promotion_action_link; ?>" target="_blank"><img class="img-fluid" src="<?php echo $promotion_image; ?>" alt="image"></a>
 			    </figure>
+                <?php endif; ?>
 		    </div><!--//container-->
 	    </section><!--//promo-section-->
 	    

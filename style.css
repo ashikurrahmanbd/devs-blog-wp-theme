@@ -9,3 +9,19 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, developer blog
 Text Domain: devs-blog
 */
+
+
+body.single .blog-nav .nav-link{
+    font-size: 13px;
+}
+
+body.single .blog-nav .nav-link .arrow-prev{
+    left: 1px;
+}
+
+body.single .blog-nav .nav-link .arrow-next{
+    right: 1px;
+}
+
+
+

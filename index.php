@@ -58,22 +58,32 @@
 				
 				<nav class="blog-nav nav nav-justified my-5">
 
-					<?php
-						$prev_post_url = get_previous_posts_page_link();
-						$next_post_url = get_next_posts_page_link();
-					?>
-
-					<?php if($prev_post_url): ?>
-					<a class="nav-link-prev nav-item nav-link rounded-left" href="<?php echo esc_url($prev_post_url); ?>">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+					<!-- Previous Page Link -->
+					<?php if (get_previous_posts_link()): ?>
+						<a class="nav-link-prev nav-item nav-link rounded-left" href="<?php echo esc_url(get_previous_posts_page_link()); ?>">
+							Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i>
+						</a>
+					<?php else: ?>
+						<span class="nav-link-prev nav-item nav-link rounded-left disabled" aria-disabled="true">
+							Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i>
+						</span>
 					<?php endif; ?>
 
-					<?php if($next_post_url): ?>
-					<a class="nav-link-next nav-item nav-link rounded-right" href="<?php echo esc_url($next_post_url); ?>">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+					<!-- Next Page Link -->
+					<?php if (get_next_posts_link()): ?>
+						<a class="nav-link-next nav-item nav-link rounded-right" href="<?php echo esc_url(get_next_posts_page_link()); ?>">
+							Next<i class="arrow-next fas fa-long-arrow-alt-right"></i>
+						</a>
+					<?php else: ?>
+						<span class="nav-link-next nav-item nav-link rounded-right disabled" aria-disabled="true">
+							Next<i class="arrow-next fas fa-long-arrow-alt-right"></i>
+						</span>
 					<?php endif; ?>
 
-
-				  
 				</nav>
+
+
+				
 
 
 			    
