@@ -55,14 +55,32 @@
 
 			    
 			    
+				
+				<nav class="blog-nav nav nav-justified my-5">
 
+					<?php
+						$prev_post_url = get_previous_posts_page_link();
+						$next_post_url = get_next_posts_page_link();
+					?>
+
+					<?php if($prev_post_url): ?>
+					<a class="nav-link-prev nav-item nav-link rounded-left" href="<?php echo esc_url($prev_post_url); ?>">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+					<?php endif; ?>
+
+					<?php if($next_post_url): ?>
+					<a class="nav-link-next nav-item nav-link rounded-right" href="<?php echo esc_url($next_post_url); ?>">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+					<?php endif; ?>
+
+
+				  
+				</nav>
 
 
 			    
-			    <nav class="blog-nav nav nav-justified my-5">
+			    <!-- <nav class="blog-nav nav nav-justified my-5">
 				  <a class="nav-link-prev nav-item nav-link d-none rounded-left" href="#">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
 				  <a class="nav-link-next nav-item nav-link rounded" href="blog-list.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
-				</nav>
+				</nav> -->
 				
 		    </div>
 	    </section>

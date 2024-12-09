@@ -1,28 +1,48 @@
 <?php get_header(); ?>
     
     <div class="main-wrapper">
-	    <div class="page-header">
-            <div class="container">
-                <h2>
-                    <?php 
-                    // Display a dynamic archive title based on the type
-                    if (is_category()) {
-                        echo 'Category: ' . single_cat_title('', false);
-                    } elseif (is_tag()) {
-                        echo 'Tag: ' . single_tag_title('', false);
-                    } elseif (is_author()) {
-                        echo 'Author: ' . get_the_author();
-                    } elseif (is_date()) {
-                        echo 'Archive for ' . get_the_date('F Y');
-                    } elseif (is_tax()) {
-                        echo 'Taxonomy: ' . single_term_title('', false);
-                    } else {
-                        the_archive_title();
-                    }
-                    ?>
-                </h2>
-            </div>
+
+        <div class="page-header">
+            <section class="cta-section theme-bg-light py-5">
+                <div class="container text-center">
+                    <h2 class="heading">
+
+
+                        <?php 
+                        // Display a dynamic archive title based on the type
+                        if (is_category()) {
+
+                            echo 'Category: ' . single_cat_title('', false);
+
+                        } elseif (is_tag()) {
+
+                            echo 'Tag: ' . single_tag_title('', false);
+
+                        } elseif (is_author()) {
+
+                            echo 'Author: ' . get_the_author();
+
+                        } elseif (is_date()) {
+
+                            echo 'Archive for ' . get_the_date('F Y');
+
+                        } elseif (is_tax()) {
+
+                            echo 'Taxonomy: ' . single_term_title('', false);
+
+                        } else {
+
+                            the_archive_title();
+
+                        }
+                        ?>
+
+
+                    </h2>
+                </div>
+            </section>
         </div>
+	    
 	    <section class="blog-list px-3 py-5 p-md-5">
 		    <div class="container">
 
