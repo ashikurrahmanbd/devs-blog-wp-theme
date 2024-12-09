@@ -410,9 +410,28 @@ Redux::set_section($opt_name, array(
 //Newsletter
 Redux::set_section($opt_name, array(
 
-	'title'	=> __('Newsletter', 'devs-blog')
+	'title'	=> __('Newsletter', 'devs-blog'),
+	'fields'	=> array(
+
+		array(
+
+			'title'	=> __('News Leter Section Heading', 'devs-blog'),
+			'id'		=> 'newsletter_section_heading',
+			'type'		=> 'text'
+
+		),
+		array(
+
+			'title'	=> __('News Leter Section Subheading', 'devs-blog'),
+			'id'		=> 'newsletter_section_subheading',
+			'type'		=> 'text'
+
+		),
+
+	)
 
 ));
+
 
 /*
  * <--- END SECTIONS

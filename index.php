@@ -1,10 +1,20 @@
-<?php get_header(); ?>
+<?php
+global $devs_blog;
+
+get_header(); ?>
     
     <div class="main-wrapper">
 	    <section class="cta-section theme-bg-light py-5">
 		    <div class="container text-center">
-			    <h2 class="heading">DevBlog - A Blog Template Made For Developers</h2>
-			    <div class="intro">Welcome to my blog. Subscribe and get my latest blog post in your inbox.</div>
+
+				<?php 
+					$newsletter_section_heading = isset($devs_blog['newsletter_section_heading']) ? $devs_blog['newsletter_section_heading'] : '';
+
+					$newsletter_section_subheading = isset($devs_blog['newsletter_section_subheading']) ? $devs_blog['newsletter_section_subheading'] : '';
+				?>
+
+			    <h2 class="heading"><?php echo $newsletter_section_heading; ?></h2>
+			    <div class="intro"><?php echo $newsletter_section_subheading; ?></div>
 			    <form class="signup-form form-inline justify-content-center pt-3">
                     <div class="form-group">
                         <label class="sr-only" for="semail">Your email</label>
