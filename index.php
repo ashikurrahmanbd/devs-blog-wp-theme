@@ -63,8 +63,6 @@ get_header(); ?>
 				<?php endwhile; wp_reset_postdata(); ?>
 				<?php endif; ?>
 
-			    
-			    
 				
 				<nav class="blog-nav nav nav-justified my-5">
 
