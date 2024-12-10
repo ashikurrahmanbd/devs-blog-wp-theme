@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="favicon.ico"> 
+    
     
     <!-- FontAwesome JS-->
     <!-- dynamically added -->
@@ -94,19 +94,7 @@
 			        <hr> 
 				</div><!--//profile-section-->
 				
-				<!-- <ul class="navbar-nav flex-column text-left">
-
-					<li class="nav-item active">
-					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw mr-2"></i>Blog Post</a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
-					</li>
-
-				</ul> -->
+				
 
 				<?php
 					wp_nav_menu(array(

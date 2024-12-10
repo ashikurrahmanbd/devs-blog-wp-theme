@@ -2,11 +2,12 @@
 Theme Name: Devs Blog
 Theme URI: https://wordpress.org/themes/devs-blog
 Author: Ashikur Rahman
+Author URI: https://pixelese.com/ashikur-rahman
 Description: Clean and Professional Blog template for Developer
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, developer blog
+Tags: blog,
 Text Domain: devs-blog
 */
 
@@ -33,3 +34,12 @@ body.single .blog-nav .nav-link .arrow-next{
 
 }
 
+.wp-caption{}
+.wp-caption-text{}
+.gallery-caption{}
+.bypostauthor{}
+.alignright{}
+.alignleft{}
+.aligncenter{}
+
+.screen-reader-text{}
